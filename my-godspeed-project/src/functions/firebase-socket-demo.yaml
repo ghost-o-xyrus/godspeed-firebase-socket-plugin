@@ -1,0 +1,11 @@
+id: firebase-socket-demo
+description: Demo workflow using Firebase-Socket datasource with dynamic input
+tasks:
+  - id: write-user
+    fn: datasource.firebase-socket.execute
+    args: {} #no interpolation, passing nothing here
+  
+  - id: hello
+    fn: helloworld
+    args:
+      message: "User written to Firebase and event emitted via Socket.IO!"

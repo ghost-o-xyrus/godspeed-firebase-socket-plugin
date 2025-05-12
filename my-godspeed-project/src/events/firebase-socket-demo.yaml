@@ -1,0 +1,3 @@
+http.post./firebase-socket-demo:
+  fn: firebase-socket-demo
+  authn: false
