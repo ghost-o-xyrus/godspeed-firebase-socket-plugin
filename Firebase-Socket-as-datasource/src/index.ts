@@ -4,7 +4,7 @@ import { getDatabase, ref, set, onValue, Database } from "firebase/database";
 import { io, Socket } from "socket.io-client";
 
 const firebaseConfig = {
-  databaseURL: "https://your-project-id.firebaseio.com" // 
+  databaseURL:  process.env.FIREBASE_DATABASE_URL // set here for node env. in render.com
   //databaseURL: "https://your-project-id.firebaseio.com" // Replace with with your project firebase realtime DB url  
 };
 
@@ -12,7 +12,7 @@ const app = initializeApp(firebaseConfig);
 const database: Database = getDatabase(app);
 
 // Initialize Socket.IO Client
-const socket: Socket = io("http://localhost:3000");
+const socket: Socket = io(process.env.SOCKET_URL || "http://localhost:3000");
 
 
 export default class DataSource extends GSDataSource {

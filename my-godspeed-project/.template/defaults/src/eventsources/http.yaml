@@ -1,5 +1,5 @@
 type: express  # Defines the type of event source (Express.js HTTP server)
-port: 3000     # The port on which the HTTP service runs
+port: 3003     # The port on which the HTTP service runs
 
 # Base URL for the HTTP service (Uncomment to enable), All API endpoints will be prefixed with this URL
 # base_url: /api/v1 

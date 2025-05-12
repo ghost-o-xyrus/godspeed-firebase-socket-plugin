@@ -1,5 +1,5 @@
 type: firebase-socket-datasource
 # Add any config options your datasource expects here
 config:
-databaseURL: "your-firebase-RTDB-URL"  # Replace with your Firebase URL
-socketURL: "http://localhost:3000"  # URL of your Socket.IO server 
+databaseURL: ${FIREBASE_DATABASE_URL} # for render.com in node env
+socketURL: ${SOCKET_URL}  # URL of your Socket.IO server 
